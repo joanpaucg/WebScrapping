@@ -16,13 +16,14 @@ class Client(object):
         """Buscar text"""
         soup=BeautifulSoup(html,'html.parser')
         title=soup.find("div","dotd-title")
-        print title.text
+        return title.text
 
 
 
     def main(self):
         web=client.get_web("https://www.packtpub.com/packt/offers/free-learning/")
-        client.search_text(web)
+        title_book=client.search_text(web)
+        print title_book
 
 
 
