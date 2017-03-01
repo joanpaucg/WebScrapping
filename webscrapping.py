@@ -23,7 +23,7 @@ class Client(object):
     def main(self):
         web=client.get_web("https://www.packtpub.com/packt/offers/free-learning/")
         title_book=client.search_text(web)
-        print title_book
+        print title_book.strip()
 
 
 
